@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель — Сибирское здоровье</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+    <div class="container admin-header__inner">
+        <a href="index.html" class="admin-logo">
+            <div class="logo">
+                <div class="logo__main">
+                    <span class="logo__accent">Сибирское</span> здоровье
+                </div>
+                <div class="logo__city">Бирск</div>
+            </div>
+        </a>
+        <div class="admin-title">
+            <h1>Админ-панель</h1>
+            <p>Управление товарами, заказами и сообщениями</p>
+        </div>
+        <a href="index.html" class="btn-back">← На сайт</a>
+    </div>
+</header>
+
+<main class="admin-container">
+    <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="orders">Заказы</button>
+        <button class="admin-tab" data-tab="products">Товары</button>
+        <button class="admin-tab" data-tab="add">➕ Добавить товар</button>
+        <button class="admin-tab" data-tab="feedback">Сообщения</button>
+    </div>
+
+    <section id="ordersPanel" class="admin-panel active">
+        <h2>Поступившие заказы</h2>
+        <div id="ordersList"></div>
+    </section>
+
+    <section id="productsPanel" class="admin-panel">
+        <h2>Товары</h2>
+        <input type="text" id="searchProduct" class="admin-search" placeholder="Поиск товара...">
+        <div id="productsList"></div>
+    </section>
+
+    <section id="addPanel" class="admin-panel">
+        <div class="admin-form">
+            <h2>Добавить товар</h2>
+            <div class="admin-form-grid">
+                <div><label>Название товара</label><input type="text" id="newName"></div>
+                <div>
+                    <label>Категория</label>
+                    <select id="newCategory">
+                        <option value="vitamins">Витамины и БАДы</option>
+                        <option value="tea">Фиточаи</option>
+                        <option value="cosmetics">Косметика</option>
+                    </select>
+                </div>
+                <div><label>Цена</label><input type="number" id="newPrice"></div>
+                <div><label>Объём</label><input type="text" id="newVolume"></div>
+                <div><label>Изображение</label><input type="text" id="newImage" placeholder="img/product.png"></div>
+                <div>
+                    <label>Наличие</label>
+                    <select id="newStock">
+                        <option value="В наличии">В наличии</option>
+                        <option value="Остаток ограничен">Остаток ограничен</option>
+                        <option value="Нет в наличии">Нет в наличии</option>
+                    </select>
+                </div>
+                <div><label>Акция</label><input type="text" id="newPromo"></div>
+                <div>
+                    <label>Показывать на главной</label>
+                    <select id="newPopular">
+                        <option value="true">Да</option>
+                        <option value="false">Нет</option>
+                    </select>
+                </div>
+                <div class="full-width"><label>Описание</label><textarea id="newDescription"></textarea></div>
+            </div>
+            <button id="addProductBtn" class="btn btn--primary"> Добавить товар</button>
+        </div>
+    </section>
+
+    <section id="feedbackPanel" class="admin-panel">
+        <h2>Сообщения клиентов</h2>
+        <div id="feedbackList"></div>
+    </section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

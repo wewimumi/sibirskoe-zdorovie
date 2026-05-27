@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Интернет-магазин «Сибирское здоровье» в Бирске. Витамины, фиточаи, косметика для здоровья. Доставка по городу.">
+  <title>Сибирское здоровье – интернет‑магазин в Бирске</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <div class="logo__main">
+          <span class="logo__accent">Сибирское</span> здоровье
+        </div>
+        <div class="logo__city">Бирск</div>
+      </div>
+      <nav class="nav">
+        <a href="#hero" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="#promos" class="nav__link">Акции</a>
+        <a href="certificates.html" class="nav__link">Сертификаты</a>
+        <a href="#about" class="nav__link">О компании</a>
+        <a href="#contacts-map" class="nav__link">Контакты</a>
+      </nav>
+      <button type="button" class="cart-button" id="cartButton">
+        Корзина
+        <span class="cart-button__count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__banner" aria-hidden="true">
+          <img src="img/banner.jpg" alt="Природа Сибири" class="hero__banner-img">
+        </div>
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h1>Натуральные продукты для здоровья из Сибири</h1>
+            <p>Интернет‑магазин «Сибирское здоровье» в Бирске – витамины, фиточаи и косметика на основе природных ингредиентов. Доставка по городу и самовывоз.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <h2>Популярные товары</h2>
+        </div>
+        <div id="productList" class="catalog__grid"></div>
+        <div style="text-align: center; margin-top: 24px;">
+          <a href="catalog.html" class="btn btn--primary">Перейти в полный каталог</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promos" id="promos">
+      <div class="container">
+        <div class="section-header">
+          <h2>Специальные предложения</h2>
+        </div>
+        <div class="promos__grid">
+          <article class="promo-card" data-promo="immunity">
+            <div class="promo-card__label">-15% на комплекс «Сила Сибири»</div>
+            <h3 class="promo-card__title">Поддержка иммунитета</h3>
+            <p class="promo-card__text">При покупке витаминного комплекса «Сила Сибири» вы получаете скидку 15%. Акция действует при онлайн‑заказе через корзину.</p>
+            <p class="promo-card__note">Срок действия акции: до 31.12.2026</p>
+          </article>
+          <article class="promo-card" data-promo="tea">
+            <div class="promo-card__label">-10% на второй фиточай</div>
+            <h3 class="promo-card__title">Забота о здоровье каждый день</h3>
+            <p class="promo-card__text">При покупке двух фиточаёв «Тайга детокс» или «Укрепление иммунитета» скидка 10% на второй товар в чеке.</p>
+            <p class="promo-card__note">Скидка рассчитывается автоматически при оформлении заказа.</p>
+          </article>
+          <article class="promo-card promo-card--accent" data-promo="gift">
+            <div class="promo-card__label">Подарочный сертификат</div>
+            <h3 class="promo-card__title">Подарите здоровье близким</h3>
+            <p class="promo-card__text">Электронный подарочный сертификат на сумму 1000, 3000 или 5000 ₽. Идеальный вариант подарка для тех, кто заботится о себе.</p>
+            <p class="promo-card__note">Сертификат действует 6 месяцев с момента активации.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="certificates" id="certificates">
+      <div class="container certificates__inner">
+        <div>
+          <h2>Сертификаты качества</h2>
+          <p>Вся продукция, представленная в интернет‑магазине «Сибирское здоровье», проходит обязательную сертификацию и соответствует действующим требованиям к качеству и безопасности.</p>
+          <ul class="certificates__list">
+            <li>Декларации о соответствии на биологически активные добавки.</li>
+            <li>Сертификаты соответствия на косметическую продукцию.</li>
+            <li>Протоколы лабораторных испытаний по основным показателям безопасности.</li>
+          </ul>
+        </div>
+        <div class="certificates__cards">
+          <article class="certificate-card" data-certificate="gost">
+            <h3>ГОСТ и ТР ТС</h3>
+            <p>Продукция разрабатывается и выпускается в соответствии с требованиями ГОСТ и технических регламентов Таможенного союза.</p>
+          </article>
+          <article class="certificate-card" data-certificate="lab">
+            <h3>Собственная лаборатория</h3>
+            <p>Перед запуском в продажу образцы проходят внутренний контроль качества и проверки на содержание активных веществ.</p>
+          </article>
+          <article class="certificate-card" data-certificate="client">
+            <h3>Прозрачность для клиентов</h3>
+            <p>По запросу покупателя мы предоставляем копии сертификатов и деклараций на интересующие препараты и косметику.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about__inner">
+        <div class="about__text">
+          <h2>О компании «Сибирское здоровье»</h2>
+          <p>«Сибирское здоровье» – это сочетание природных ингредиентов и современных технологий. Мы подбираем продукцию, которая помогает поддерживать иммунитет, энергичность и красоту.</p>
+          <p>В нашем магазине вы найдете витамины, фиточаи и косметику, созданные на основе сибирских трав, растений и минералов. Вся продукция сопровождается подробным описанием и рекомендациями по применению.</p>
+        </div>
+        <div class="about__highlights">
+          <div class="highlight-card">
+            <h3>Натуральный состав</h3>
+            <p>Подбор товаров с максимальным содержанием природных компонентов.</p>
+          </div>
+          <div class="highlight-card">
+            <h3>Качество и безопасность</h3>
+            <p>Продукция проходит сертификацию и контроль качества.</p>
+          </div>
+          <div class="highlight-card">
+            <h3>Забота о клиентах</h3>
+            <p>Подробные консультации и советы по подбору продукции.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАРТА С МЕСТОПОЛОЖЕНИЕМ МАГАЗИНА -->
+    <section class="contacts-map" id="contacts-map">
+      <div class="container">
+        <div class="section-header">
+          <h2>Как нас найти</h2>
+        </div>
+        <div class="contacts-map__wrapper">
+          <div id="shopMap" class="contacts-map__canvas"></div>
+          <div class="contacts-map__info">
+            <div class="contacts-map__address">
+              <div>
+                <strong>Магазин «Сибирское здоровье»</strong>
+                <p>ул. Коммунистическая, 62, Бирск</p>
+              </div>
+            </div>
+            <div class="contacts-map__hours">
+              <div>
+                <strong>Режим работы</strong>
+                <p>Понедельник – пятница: 9:00 – 18:00</p>
+                <p>Суббота – воскресенье: выходной</p>
+                <p class="contacts-map__note">Заказы через сайт принимаются 24/7</p>
+              </div>
+            </div>
+            <div class="contacts-map__delivery">
+              <div>
+                <strong>Доставка</strong>
+                <p>По городу Бирск – бесплатно от 2000 ₽</p>
+                <p>Самовывоз: ул. Коммунистическая, 62</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback" id="feedback">
+      <div class="container">
+        <div class="feedback__grid">
+          <div class="feedback__info">
+            <div class="feedback__card">
+              <h3>Почему выбирают нас</h3>
+              <p>Тысячи довольных клиентов в Бирске уже оценили качество нашей продукции и сервис.</p>
+            </div>
+            <div class="feedback__card">
+              <h3>Быстрый ответ</h3>
+              <p>Отвечаем на сообщения в течение 1–2 часов в рабочее время. Всегда на связи.</p>
+            </div>
+            <div class="feedback__card">
+              <h3>Поможем с выбором</h3>
+              <p>Не знаете, что подойдёт именно вам? Напишите - мы подберём оптимальный вариант.</p>
+            </div>
+            <div class="feedback__card">
+              <h3>Гарантия качества</h3>
+              <p>Вся продукция сертифицирована. Если товар не подошёл - поможем с заменой.</p>
+            </div>
+          </div>
+          <div class="feedback__form-wrapper">
+            <form class="feedback__form" id="feedbackForm">
+              <h3>Заполните форму, и мы ответим в ближайшее время</h3>
+              <label class="form__field">
+                <span>Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Иван Иванов" required />
+              </label>
+              <label class="form__field">
+                <span>E-mail</span>
+                <input type="email" name="email" class="input" placeholder="example@mail.com" required />
+                <small class="form__hint">Введите email в формате name@mail.com</small>
+              </label>
+              <label class="form__field">
+                <span>Сообщение</span>
+                <textarea name="message" class="textarea" rows="4" placeholder="Напишите ваш вопрос..." required></textarea>
+              </label>
+              <button type="submit" class="btn btn--primary btn--full">Отправить сообщение</button>
+              <p class="form__success" id="feedbackSuccess" hidden>✅ Спасибо! Ваше сообщение отправлено.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4>Контакты</h4>
+          <p><strong>Телефон:</strong> +7 (900) 000-00-00</p>
+          <p><strong>E-mail:</strong> info@sib-health.ru</p>
+          <p><strong>Адрес:</strong> г. Бирск, ул. Коммунистическая, 62</p>
+        </div>
+        <div class="footer__col">
+          <h4>Режим работы</h4>
+          <p><strong>Пн–Пт:</strong> 9:00 – 18:00</p>
+          <p><strong>Сб–Вс:</strong> выходной</p>
+          <p class="footer__requisites">ИП Гарипова А.Р. | ОГРН: 1234567890123</p>
+        </div>
+        <div class="footer__col">
+          <h4>Быстрые ссылки</h4>
+          <ul class="footer__links">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="certificates.html">Сертификаты</a></li>
+            <li><a href="#promos">Акции</a></li>
+            <li><a href="#about">О компании</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div style="margin-top: 10px;">
+          <a href="#" id="adminLoginLink" style="color: #8a9a8a; font-size: 11px; text-decoration: none; opacity: 0.5;">Вход для администратора</a>
+        </div>
+        <p>© 2026 «Сибирское здоровье» — интернет-магазин в Бирске. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- КОРЗИНА -->
+  <div class="cart" id="cartPanel" aria-hidden="true">
+    <div class="cart__overlay" id="cartOverlay"></div>
+    <div class="cart__content">
+      <div class="cart__header">
+        <h2>Корзина</h2>
+        <button type="button" class="cart__close" id="cartClose" aria-label="Закрыть корзину">×</button>
+      </div>
+      <div class="cart__scrollable">
+        <div class="cart__items" id="cartItems"></div>
+        <div class="cart__summary">
+          <div class="cart__row">
+            <span>Сумма без скидки:</span>
+            <span id="cartSubtotal">0 ₽</span>
+          </div>
+          <div class="cart__row cart__row--discount" id="cartDiscountRow" hidden>
+            <span>Скидка по акциям:</span>
+            <span id="cartDiscount">‑0 ₽</span>
+          </div>
+          <div class="cart__row cart__row--total">
+            <span>Итого к оплате:</span>
+            <span id="cartTotal">0 ₽</span>
+          </div>
+
+          <button id="clearCartBtn" class="btn-clear-cart" style="display: block; margin-bottom: 15px; background: #ef4444; color: white; border: none; padding: 8px 20px; border-radius: 30px; cursor: pointer; font-size: 13px;">
+    Очистить корзину
+</button>
+
+          <form class="form cart__form" id="orderForm" novalidate>
+            <h3>Оформление заказа</h3>
+            <label class="form__field">
+              <span>Имя и фамилия</span>
+              <input type="text" name="name" class="input" autocomplete="name" placeholder="Иван Иванов" required />
+            </label>
+            <label class="form__field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" class="input" placeholder="+79991234567" pattern="(\+7|8)[0-9]{10}" required/>
+              <small class="form__hint">Формат: +79990000000</small>
+            </label>
+            <label class="form__field">
+              <span>Способ доставки</span>
+              <select name="delivery" class="select" id="deliverySelect" required>
+                <option value="">Выберите доставку</option>
+                <option value="pickup">Самовывоз (г. Бирск)</option>
+                <option value="courier">Курьер по городу Бирск</option>
+              </select>
+            </label>
+
+            <div id="addressField" style="display: none;">
+              <label class="form__field">
+                <span>Адрес доставки</span>
+                <input type="text" name="address" class="input" id="addressInput" placeholder="г. Бирск, ул. ... , д. ...">
+                <small class="form__hint">Укажите улицу, дом, квартиру</small>
+              </label>
+              <button type="button" id="openAddressMapBtn" class="btn-map">🗺️ Выбрать на карте</button>
+            </div>
+
+            <div id="addressMapModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center;">
+              <div style="background: white; border-radius: 20px; width: 90%; max-width: 600px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                <div style="padding: 18px 20px; background: var(--color-primary-dark); color: white; display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 18px; font-weight: 600;">📍 Выберите точку на карте</span>
+                  <button id="closeAddressMapBtn" style="background: none; border: none; color: white; font-size: 28px; cursor: pointer;">&times;</button>
+                </div>
+                <div id="addressMap" style="height: 400px; width: 100%;"></div>
+                <div style="padding: 16px; text-align: center; background: #f9fafb;">
+                  <button id="confirmAddressBtn" class="btn btn--primary" style="padding: 10px 24px;">Подтвердить адрес</button>
+                </div>
+              </div>
+            </div>
+
+            <label class="form__field" style="flex-direction: row; align-items: center; gap: 10px; margin-bottom: 20px;">
+              <input type="checkbox" id="consentCheckbox" required style="width: 18px; height: 18px; cursor: pointer;">
+              <span style="font-size: 13px;">Я согласен на <a href="#" id="privacyLink" style="color: #2f7d32;">обработку персональных данных</a></span>
+            </label>
+
+            <button type="submit" class="btn-order">Подтвердить заказ</button>
+            <p class="form__success" id="orderSuccess" hidden>Заказ успешно оформлен. Спасибо!</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f0835711-6c91-4292-918c-6f9670282bd4&lang=ru_RU"></script>
+
+  <script>
+    if (document.getElementById('shopMap')) {
+        ymaps.ready(function() {
+            const shopLat = 55.414977;
+            const shopLon = 55.531048;
+            const shopMap = new ymaps.Map('shopMap', {
+                center: [shopLat, shopLon],
+                zoom: 18,
+                controls: ['zoomControl', 'fullscreenControl']
+            });
+            const placemark = new ymaps.Placemark([shopLat, shopLon], {
+                hintContent: 'Магазин «Сибирское здоровье»',
+                balloonContent: '<div style="font-family: sans-serif;"><strong style="color: #2f7d32;">«Сибирское здоровье»</strong><br>ул. Коммунистическая, 62, Бирск<br>+7 (900) 000-00-00<br>Пн–Пт: 9:00–18:00<br>Доставка по городу от 2000 ₽</div>'
+            }, { preset: 'islands#greenShopIcon', balloonOffset: [0, -30] });
+            shopMap.geoObjects.add(placemark);
+            placemark.balloon.open();
+        });
+    }
+  </script>
+
+  <div id="adminModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center;">
+    <div style="background: white; border-radius: 16px; width: 90%; max-width: 400px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+      <div style="padding: 20px; background: var(--color-primary-dark); color: white; text-align: center;">
+        <h3 style="margin: 0;">Вход в админ-панель</h3>
+      </div>
+      <div style="padding: 30px 20px;">
+        <label style="display: block; margin-bottom: 10px; font-weight: 500;">Введите пароль:</label>
+        <input type="password" id="adminPassword" class="input" placeholder="Пароль" style="width: 100%; margin-bottom: 20px;">
+        <div style="display: flex; gap: 10px;">
+          <button id="adminLoginBtn" class="btn btn--primary" style="flex: 1;">Войти</button>
+          <button id="adminModalCloseBtn" class="btn btn--secondary" style="flex: 1;">Отмена</button>
+        </div>
+        <p id="adminError" style="color: red; font-size: 12px; margin-top: 15px; text-align: center; display: none;">❌ Неверный пароль</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ADMIN_PASSWORD = 'admin123';
+    const adminLoginLink = document.getElementById('adminLoginLink');
+    const adminModal = document.getElementById('adminModal');
+    const adminPasswordInput = document.getElementById('adminPassword');
+    const adminLoginBtn = document.getElementById('adminLoginBtn');
+    const adminModalCloseBtn = document.getElementById('adminModalCloseBtn');
+    const adminError = document.getElementById('adminError');
+    
+    if (adminLoginLink) {
+      adminLoginLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (adminModal) {
+          adminModal.style.display = 'flex';
+          adminPasswordInput.value = '';
+          adminError.style.display = 'none';
+        }
+      });
+    }
+    
+    function loginToAdmin() {
+      const password = adminPasswordInput.value;
+      if (password === ADMIN_PASSWORD) {
+        window.location.href = 'admin.html';
+      } else {
+        adminError.style.display = 'block';
+      }
+    }
+    
+    if (adminLoginBtn) adminLoginBtn.addEventListener('click', loginToAdmin);
+    if (adminPasswordInput) adminPasswordInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') loginToAdmin();
+    });
+    if (adminModalCloseBtn) adminModalCloseBtn.addEventListener('click', function() {
+      adminModal.style.display = 'none';
+    });
+    if (adminModal) adminModal.addEventListener('click', function(e) {
+      if (e.target === adminModal) adminModal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
